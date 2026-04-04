@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-browser": {
+      "source": "fellipeutaka/leon",
+      "sourceType": "github",
+      "computedHash": "0eafe0971692cf8fcecb75f955595821452a835791d315db738f89ee49063a34"
+    },
+    "ai-repo-setup": {
+      "source": "fellipeutaka/leon",
+      "sourceType": "github",
+      "computedHash": "a56b8d99f6e6eb6a253206631866f840affa87727f9f3aeb09871add627ee7e9"
+    },
+    "clean-code": {
+      "source": "fellipeutaka/leon",
+      "sourceType": "github",
+      "computedHash": "621729bdca70f20330723d0fa8650dfef1ceb8eef1e40697df302736c4c88133"
+    },
+    "commit-work": {
+      "source": "fellipeutaka/leon",
+      "sourceType": "github",
+      "computedHash": "88cec816d028de357ae7ede3ace36a2bc235a225e3e7d2bb18cdb5190ab6c482"
+    },
+    "pnpm": {
+      "source": "fellipeutaka/leon",
+      "sourceType": "github",
+      "computedHash": "318f9fca2441a3e06fedc336e195dd18be5dbe901064e4fa71b76b40b096ab3a"
+    },
+    "turborepo": {
+      "source": "fellipeutaka/leon",
+      "sourceType": "github",
+      "computedHash": "5fd246a0319cd25147d2a33f753cb8bfb34461f5ff1cd18311fe6e33cc64d86f"
+    }
+  }
+}
