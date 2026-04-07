@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "ai-sdk": {
+      "source": "fellipeutaka/leon",
+      "sourceType": "github",
+      "computedHash": "58ce68f628890c3925aea2b5435a649251ac182057541045c68fc19a27aaa0ec"
+    },
+    "design-patterns": {
+      "source": "fellipeutaka/leon",
+      "sourceType": "github",
+      "computedHash": "7921b815d7f47752faa9457a3c3983417ba3cf547385aedcf00ddadc83090d55"
+    },
+    "hono": {
+      "source": "fellipeutaka/leon",
+      "sourceType": "github",
+      "computedHash": "220e5e1b12bbaeec49ec362b6e2262d77632d0536e9758bba9acbbc323fef990"
+    },
+    "solid": {
+      "source": "fellipeutaka/leon",
+      "sourceType": "github",
+      "computedHash": "96e5f4a87038abcedc5ece33dc925a8e31f1e02f71b609d04d92b97aad684dd5"
+    }
+  }
+}
