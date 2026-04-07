@@ -4,10 +4,12 @@ pre-commit:
     - name: lint
       run: pnpm biome lint {staged_files}
       glob: "*.{ts,tsx,js,jsx}"
+      exclude: "**/.agents/**"
 
     - name: format
       run: pnpm biome format {staged_files}
       glob: "*.{ts,tsx,js,jsx,json,css}"
+      exclude: "**/.agents/**"
 
     - name: type-check
       run: pnpm turbo run type-check
