@@ -1,0 +1,13 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: lint
+      run: pnpm biome lint {staged_files}
+      glob: "*.{ts,tsx,js,jsx}"
+
+    - name: format
+      run: pnpm biome format {staged_files}
+      glob: "*.{ts,tsx,js,jsx,json,css}"
+
+    - name: type-check
+      run: pnpm turbo run type-check
