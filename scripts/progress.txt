@@ -1,0 +1,1 @@
+[2026-04-08] Task 1.1 done — Installed Vercel AI SDK and providers (@ai-sdk/openai, @ai-sdk/anthropic, @ai-sdk/google, ai) in the API app. Type-check passes.

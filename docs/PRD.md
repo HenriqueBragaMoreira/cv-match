@@ -10,7 +10,7 @@ Stack: Turborepo + pnpm | API: Hono + Cloudflare Workers | Web: Next.js 16 + sha
 FASE 1 — SETUP & INFRAESTRUTURA DA API
 ================================================================================
 
-1.1  [not implemented] Instalar Vercel AI SDK e providers no app api
+1.1  [done] Instalar Vercel AI SDK e providers no app api
      - Adicionar @ai-sdk/openai, @ai-sdk/anthropic, @ai-sdk/google e ai como dependências
      - Refs: FR-004, NFR-004
 
@@ -321,7 +321,7 @@ FASE 14 — DEPLOY E FINALIZAÇÃO
 RESUMO DE PROGRESSO
 ================================================================================
 
-Fase  1 — Setup & Infraestrutura API     : 0/5  tarefas concluídas
+Fase  1 — Setup & Infraestrutura API     : 1/5  tarefas concluídas
 Fase  2 — Schemas e Validação (API)       : 0/4  tarefas concluídas
 Fase  3 — Prompts de IA (API)             : 0/3  tarefas concluídas
 Fase  4 — Serviço de Providers (API)      : 0/2  tarefas concluídas
@@ -336,4 +336,4 @@ Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 0/59 tarefas concluídas
+TOTAL                                     : 1/59 tarefas concluídas
