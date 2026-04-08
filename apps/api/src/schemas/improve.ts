@@ -1,12 +1,13 @@
 import { z } from "zod";
 
-import { aiProvider, analyzeResponseSchema } from "./analyze.js";
+import {
+  aiProvider,
+  analyzeResponseSchema,
+  resumeFileSchema,
+} from "./analyze.js";
 
 export const improveRequestSchema = z.object({
-  resumeText: z
-    .string()
-    .min(1, "Resume text is required")
-    .max(100_000, "Resume text must not exceed 100 000 characters"),
+  resumeFile: resumeFileSchema,
   jobDescription: z
     .string()
     .min(1, "Job description is required")

@@ -1,6 +1,7 @@
 export {
   analyzeRequestSchema,
   analyzeResponseSchema,
+  resumeFileSchema,
   aiProvider,
 } from "./analyze.js";
 export type { AnalyzeRequest, AnalyzeResponse, AiProvider } from "./analyze.js";
