@@ -14,7 +14,7 @@ FASE 1 — SETUP & INFRAESTRUTURA DA API
      - Adicionar @ai-sdk/openai, @ai-sdk/anthropic, @ai-sdk/google e ai como dependências
      - Refs: FR-004, NFR-004
 
-1.2  [not implemented] Instalar Zod no app api para validação de schemas
+1.2  [done] Instalar Zod no app api para validação de schemas
      - Adicionar zod como dependência para validar requests e responses
      - Refs: BR-004
 
@@ -321,7 +321,7 @@ FASE 14 — DEPLOY E FINALIZAÇÃO
 RESUMO DE PROGRESSO
 ================================================================================
 
-Fase  1 — Setup & Infraestrutura API     : 1/5  tarefas concluídas
+Fase  1 — Setup & Infraestrutura API     : 2/5  tarefas concluídas
 Fase  2 — Schemas e Validação (API)       : 0/4  tarefas concluídas
 Fase  3 — Prompts de IA (API)             : 0/3  tarefas concluídas
 Fase  4 — Serviço de Providers (API)      : 0/2  tarefas concluídas
@@ -336,4 +336,4 @@ Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 1/59 tarefas concluídas
+TOTAL                                     : 2/59 tarefas concluídas

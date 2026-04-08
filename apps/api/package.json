@@ -16,7 +16,8 @@
     "@ai-sdk/google": "^3.0.60",
     "@ai-sdk/openai": "^3.0.52",
     "ai": "^6.0.153",
-    "hono": "^4.12.11"
+    "hono": "^4.12.11",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260405.1",
