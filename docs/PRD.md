@@ -34,7 +34,7 @@ FASE 1 — SETUP & INFRAESTRUTURA DA API
 FASE 2 — SCHEMAS E VALIDAÇÃO (API)
 ================================================================================
 
-2.1  [not implemented] Definir schema Zod para request do endpoint /analyze
+2.1  [done] Definir schema Zod para request do endpoint /analyze
      - Campos: resumeText (string), jobDescription (string), provider (enum), apiKey (string)
      - Refs: FR-005, FR-003, FR-004
 
@@ -322,7 +322,7 @@ RESUMO DE PROGRESSO
 ================================================================================
 
 Fase  1 — Setup & Infraestrutura API     : 5/5  tarefas concluídas
-Fase  2 — Schemas e Validação (API)       : 0/4  tarefas concluídas
+Fase  2 — Schemas e Validação (API)       : 1/4  tarefas concluídas
 Fase  3 — Prompts de IA (API)             : 0/3  tarefas concluídas
 Fase  4 — Serviço de Providers (API)      : 0/2  tarefas concluídas
 Fase  5 — Endpoints da API                : 0/3  tarefas concluídas
@@ -336,4 +336,4 @@ Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 4/59 tarefas concluídas
+TOTAL                                     : 5/59 tarefas concluídas
