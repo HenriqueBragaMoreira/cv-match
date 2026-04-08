@@ -50,7 +50,7 @@ Definitions live in `../REQUIREMENTS.md`.
 ### CV Improvement
 
 #### FR-012: Generate improved CV
-- **Status**: `refined`
+- **Status**: `in progress`
 - **Scope (api)**: `POST /improve` endpoint. Receives original resume, job description, analysis result, provider, and API key. Returns improved resume text.
 
 #### FR-013: Improved CV score
