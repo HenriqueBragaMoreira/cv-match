@@ -1,2 +1,6 @@
-export { analyzeRequestSchema, aiProvider } from "./analyze.js";
-export type { AnalyzeRequest, AiProvider } from "./analyze.js";
+export {
+  analyzeRequestSchema,
+  analyzeResponseSchema,
+  aiProvider,
+} from "./analyze.js";
+export type { AnalyzeRequest, AnalyzeResponse, AiProvider } from "./analyze.js";
