@@ -17,3 +17,14 @@ export const improveRequestSchema = z.object({
 });
 
 export type ImproveRequest = z.infer<typeof improveRequestSchema>;
+
+export const improveResponseSchema = z.object({
+  improvedResume: z.string().min(1, "Improved resume text is required"),
+  changes: z.string().min(1, "Changes summary is required"),
+  newScore: z
+    .int()
+    .min(0, "Score must be at least 0")
+    .max(100, "Score must be at most 100"),
+});
+
+export type ImproveResponse = z.infer<typeof improveResponseSchema>;
