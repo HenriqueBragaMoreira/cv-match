@@ -18,7 +18,7 @@ FASE 1 — SETUP & INFRAESTRUTURA DA API
      - Adicionar zod como dependência para validar requests e responses
      - Refs: BR-004
 
-1.3  [not implemented] Criar estrutura de pastas da API
+1.3  [done] Criar estrutura de pastas da API
      - Organizar src/ com routes/, schemas/, prompts/, services/, utils/
      - Refs: NFR-001
 
@@ -321,7 +321,7 @@ FASE 14 — DEPLOY E FINALIZAÇÃO
 RESUMO DE PROGRESSO
 ================================================================================
 
-Fase  1 — Setup & Infraestrutura API     : 2/5  tarefas concluídas
+Fase  1 — Setup & Infraestrutura API     : 3/5  tarefas concluídas
 Fase  2 — Schemas e Validação (API)       : 0/4  tarefas concluídas
 Fase  3 — Prompts de IA (API)             : 0/3  tarefas concluídas
 Fase  4 — Serviço de Providers (API)      : 0/2  tarefas concluídas
@@ -336,4 +336,4 @@ Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 2/59 tarefas concluídas
+TOTAL                                     : 3/59 tarefas concluídas
