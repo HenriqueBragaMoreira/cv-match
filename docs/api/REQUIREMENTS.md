@@ -21,7 +21,7 @@ Definitions live in `../REQUIREMENTS.md`.
 
 #### FR-005: ATS analysis submission
 - **Status**: `refined`
-- **Scope (api)**: `POST /analyze` endpoint. Receives resume text, job description, provider, and API key. Constructs the ATS prompt and sends to the AI model. Returns structured analysis response.
+- **Scope (api)**: `POST /analyze` endpoint. Receives resume file (via multipart/form-data), job description, provider, and API key. Extracts text from the uploaded file, constructs the ATS prompt and sends to the AI model. Returns structured analysis response.
 
 #### FR-006: Match score display
 - **Status**: `refined`
@@ -51,7 +51,7 @@ Definitions live in `../REQUIREMENTS.md`.
 
 #### FR-012: Generate improved CV
 - **Status**: `in progress`
-- **Scope (api)**: `POST /improve` endpoint. Receives original resume, job description, analysis result, provider, and API key. Returns improved resume text.
+- **Scope (api)**: `POST /improve` endpoint. Receives original resume file (via multipart/form-data), job description, analysis result, provider, and API key. Extracts text from the uploaded file and returns improved resume text.
 
 #### FR-013: Improved CV score
 - **Status**: `refined`

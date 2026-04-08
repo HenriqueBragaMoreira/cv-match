@@ -35,8 +35,10 @@ FASE 2 — SCHEMAS E VALIDAÇÃO (API)
 ================================================================================
 
 2.1  [done] Definir schema Zod para request do endpoint /analyze
-     - Campos: resumeText (string), jobDescription (string), provider (enum), apiKey (string)
-     - Refs: FR-005, FR-003, FR-004
+     - Request via multipart/form-data para suportar upload de arquivo
+     - Campos: resumeFile (File .pdf ou .tex), jobDescription (string), provider (enum), apiKey (string)
+     - Validação de tipo e tamanho do arquivo no schema
+     - Refs: FR-001, FR-005, FR-003, FR-004
 
 2.2  [done] Definir schema Zod para response do endpoint /analyze
      - Campos: score (int 0-100), strengths[], weaknesses[], suggestions[],
@@ -45,8 +47,11 @@ FASE 2 — SCHEMAS E VALIDAÇÃO (API)
      - Refs: FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, BR-004
 
 2.3  [done] Definir schema Zod para request do endpoint /improve
-     - Campos: resumeText, jobDescription, analysisResult, provider, apiKey
-     - Refs: FR-012
+     - Request via multipart/form-data para suportar upload de arquivo
+     - Campos: resumeFile (File .pdf ou .tex), jobDescription (string),
+       analysisResult (JSON string → validado com analyzeResponseSchema),
+       provider (enum), apiKey (string)
+     - Refs: FR-001, FR-012
 
 2.4  [done] Definir schema Zod para response do endpoint /improve
      - Campos: improvedResume (string), changes (string), newScore (int 0-100)
@@ -90,30 +95,32 @@ FASE 5 — ENDPOINTS DA API
 ================================================================================
 
 5.1  [not implemented] Implementar endpoint POST /analyze
-     - Receber e validar request com Zod
+     - Receber e validar request multipart/form-data com Zod
+     - Extrair texto do arquivo enviado (PDF ou LaTeX) usando parsers da Fase 6
      - Inicializar provider com API key do usuário
-     - Enviar prompt ATS + currículo + job description ao modelo
+     - Enviar prompt ATS + texto extraído + job description ao modelo
      - Usar generateObject do AI SDK para resposta estruturada
      - Validar score no range [0, 100]
      - Retornar response no formato definido
-     - Refs: FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, BR-003, BR-004
+     - Refs: FR-001, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, BR-003, BR-004
 
 5.2  [not implemented] Implementar endpoint POST /improve
-     - Receber e validar request com Zod
+     - Receber e validar request multipart/form-data com Zod
+     - Extrair texto do arquivo enviado (PDF ou LaTeX) usando parsers da Fase 6
      - Gerar CV melhorado com prompt de improvement
      - Re-executar análise ATS no CV melhorado (mesmo prompt do /analyze)
      - Retornar CV melhorado + changes summary + novo score
-     - Refs: FR-012, FR-013, BR-005, BR-006, BR-007
+     - Refs: FR-001, FR-012, FR-013, BR-005, BR-006, BR-007
 
 5.3  [not implemented] Implementar health check GET /
      - Endpoint simples para verificar se a API está online
 
 ================================================================================
-FASE 6 — FILE UPLOAD E PARSING (API)
+FASE 6 — PARSING DE ARQUIVOS (API)  [depende da Fase 2 para schemas, executar antes da Fase 5]
 ================================================================================
 
-6.1  [not implemented] Implementar recebimento de arquivo via multipart/form-data no /analyze
-     - Aceitar campo de arquivo além de texto puro
+6.1  [done] Recebimento de arquivo via multipart/form-data
+     - Absorvido pela task 2.1 — schema já define resumeFile (File) via multipart/form-data
      - Refs: FR-001
 
 6.2  [not implemented] Instalar e configurar parser de PDF compatível com edge runtime
@@ -124,8 +131,8 @@ FASE 6 — FILE UPLOAD E PARSING (API)
      - Strip de comandos LaTeX para obter texto puro
      - Refs: FR-001
 
-6.4  [not implemented] Validar tipo de arquivo (aceitar apenas .pdf e .tex, rejeitar outros)
-     - Retornar erro claro para formatos não suportados
+6.4  [done] Validar tipo de arquivo (aceitar apenas .pdf e .tex, rejeitar outros)
+     - Absorvido pela task 2.1 — schema Zod já valida extensão do arquivo
      - Refs: FR-001
 
 ================================================================================
@@ -196,9 +203,9 @@ FASE 9 — FORMULÁRIO DE ANÁLISE (WEB)
      - Refs: FR-005
 
 9.6  [not implemented] Implementar chamada à API /analyze
-     - Enviar dados do formulário ao backend
-     - Tratar erros (key inválida, rate limit, falha de rede)
-     - Refs: FR-005
+     - Enviar dados do formulário como multipart/form-data (arquivo + campos de texto)
+     - Tratar erros (key inválida, rate limit, falha de rede, arquivo inválido)
+     - Refs: FR-001, FR-005
 
 ================================================================================
 FASE 10 — EXIBIÇÃO DE RESULTADOS DA ANÁLISE (WEB)
@@ -245,8 +252,8 @@ FASE 11 — MELHORIA DO CV (WEB)
      - Refs: FR-012
 
 11.2 [not implemented] Implementar chamada à API /improve
-     - Enviar currículo original, job description e resultado da análise
-     - Refs: FR-012
+     - Enviar arquivo do currículo original, job description e resultado da análise via multipart/form-data
+     - Refs: FR-001, FR-012
 
 11.3 [not implemented] Criar componente de exibição do CV melhorado
      - Texto formatado e legível do CV gerado
@@ -326,7 +333,7 @@ Fase  2 — Schemas e Validação (API)       : 4/4  tarefas concluídas
 Fase  3 — Prompts de IA (API)             : 0/3  tarefas concluídas
 Fase  4 — Serviço de Providers (API)      : 0/2  tarefas concluídas
 Fase  5 — Endpoints da API                : 0/3  tarefas concluídas
-Fase  6 — File Upload e Parsing (API)     : 0/4  tarefas concluídas
+Fase  6 — Parsing de Arquivos (API)       : 2/4  tarefas concluídas  (6.1 e 6.4 absorvidas por 2.1)
 Fase  7 — Testes da API                   : 0/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 0/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 0/6  tarefas concluídas
@@ -336,4 +343,4 @@ Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 8/59 tarefas concluídas
+TOTAL                                     : 10/59 tarefas concluídas
