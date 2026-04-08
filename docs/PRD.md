@@ -27,7 +27,7 @@ FASE 1 — SETUP & INFRAESTRUTURA DA API
      - Garantir que API keys nunca vazem em respostas de erro
      - Refs: BR-002
 
-1.5  [not implemented] Configurar CORS no Hono
+1.5  [done] Configurar CORS no Hono
      - Permitir requests do frontend (localhost em dev, domínio em prod)
 
 ================================================================================
@@ -321,7 +321,7 @@ FASE 14 — DEPLOY E FINALIZAÇÃO
 RESUMO DE PROGRESSO
 ================================================================================
 
-Fase  1 — Setup & Infraestrutura API     : 4/5  tarefas concluídas
+Fase  1 — Setup & Infraestrutura API     : 5/5  tarefas concluídas
 Fase  2 — Schemas e Validação (API)       : 0/4  tarefas concluídas
 Fase  3 — Prompts de IA (API)             : 0/3  tarefas concluídas
 Fase  4 — Serviço de Providers (API)      : 0/2  tarefas concluídas
