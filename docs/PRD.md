@@ -123,7 +123,7 @@ FASE 6 — PARSING DE ARQUIVOS (API)  [depende da Fase 2 para schemas, executar 
      - Absorvido pela task 2.1 — schema já define resumeFile (File) via multipart/form-data
      - Refs: FR-001
 
-6.2  [not implemented] Instalar e configurar parser de PDF compatível com edge runtime
+6.2  [done] Instalar e configurar parser de PDF compatível com edge runtime
      - Extrair texto de arquivos .pdf
      - Refs: FR-001
 
@@ -333,7 +333,7 @@ Fase  2 — Schemas e Validação (API)       : 4/4  tarefas concluídas
 Fase  3 — Prompts de IA (API)             : 3/3  tarefas concluídas
 Fase  4 — Serviço de Providers (API)      : 2/2  tarefas concluídas
 Fase  5 — Endpoints da API                : 0/3  tarefas concluídas
-Fase  6 — Parsing de Arquivos (API)       : 2/4  tarefas concluídas  (6.1 e 6.4 absorvidas por 2.1)
+Fase  6 — Parsing de Arquivos (API)       : 3/4  tarefas concluídas  (6.1 e 6.4 absorvidas por 2.1)
 Fase  7 — Testes da API                   : 0/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 0/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 0/6  tarefas concluídas
@@ -343,4 +343,4 @@ Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 15/59 tarefas concluídas
+TOTAL                                     : 16/59 tarefas concluídas

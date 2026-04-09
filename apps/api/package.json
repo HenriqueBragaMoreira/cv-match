@@ -17,6 +17,7 @@
     "@ai-sdk/openai": "^3.0.52",
     "ai": "^6.0.153",
     "hono": "^4.12.11",
+    "unpdf": "^1.4.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {
