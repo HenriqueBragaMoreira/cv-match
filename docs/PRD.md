@@ -61,7 +61,7 @@ FASE 2 — SCHEMAS E VALIDAÇÃO (API)
 FASE 3 — PROMPTS DE IA (API)
 ================================================================================
 
-3.1  [not implemented] Criar prompt de sistema para análise ATS
+3.1  [done] Criar prompt de sistema para análise ATS
      - Instruções rígidas de avaliação como um bot ATS real
      - Sem inferir qualificações que não estejam no currículo
      - Definir formato de saída estruturado (JSON) para o AI SDK
@@ -330,7 +330,7 @@ RESUMO DE PROGRESSO
 
 Fase  1 — Setup & Infraestrutura API     : 5/5  tarefas concluídas
 Fase  2 — Schemas e Validação (API)       : 4/4  tarefas concluídas
-Fase  3 — Prompts de IA (API)             : 0/3  tarefas concluídas
+Fase  3 — Prompts de IA (API)             : 1/3  tarefas concluídas
 Fase  4 — Serviço de Providers (API)      : 0/2  tarefas concluídas
 Fase  5 — Endpoints da API                : 0/3  tarefas concluídas
 Fase  6 — Parsing de Arquivos (API)       : 2/4  tarefas concluídas  (6.1 e 6.4 absorvidas por 2.1)
@@ -343,4 +343,4 @@ Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 10/59 tarefas concluídas
+TOTAL                                     : 11/59 tarefas concluídas
