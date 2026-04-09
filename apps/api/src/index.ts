@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { handleError, handleNotFound } from "./errors";
-import { analyze, health } from "./routes";
+import { analyze, health, improve } from "./routes";
 
 const app = new Hono();
 
@@ -19,5 +19,6 @@ app.notFound(handleNotFound);
 
 app.route("/", health);
 app.route("/analyze", analyze);
+app.route("/improve", improve);
 
 export default app;

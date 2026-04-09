@@ -31,9 +31,12 @@ export const improveRequestSchema = z
 
 export type ImproveRequest = z.infer<typeof improveRequestSchema>;
 
-export const improveResponseSchema = z.object({
+export const cvImprovementSchema = z.object({
   improvedResume: z.string().min(1, "Improved resume text is required"),
   changes: z.string().min(1, "Changes summary is required"),
+});
+
+export const improveResponseSchema = cvImprovementSchema.extend({
   newScore: z
     .int()
     .min(0, "Score must be at least 0")

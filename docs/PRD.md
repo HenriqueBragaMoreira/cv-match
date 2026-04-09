@@ -104,7 +104,7 @@ FASE 5 — ENDPOINTS DA API
      - Retornar response no formato definido
      - Refs: FR-001, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, BR-003, BR-004
 
-5.2  [not implemented] Implementar endpoint POST /improve
+5.2  [done] Implementar endpoint POST /improve
      - Receber e validar request multipart/form-data com Zod
      - Extrair texto do arquivo enviado (PDF ou LaTeX) usando parsers da Fase 6
      - Gerar CV melhorado com prompt de improvement
@@ -332,7 +332,7 @@ Fase  1 — Setup & Infraestrutura API     : 5/5  tarefas concluídas
 Fase  2 — Schemas e Validação (API)       : 4/4  tarefas concluídas
 Fase  3 — Prompts de IA (API)             : 3/3  tarefas concluídas
 Fase  4 — Serviço de Providers (API)      : 2/2  tarefas concluídas
-Fase  5 — Endpoints da API                : 1/3  tarefas concluídas
+Fase  5 — Endpoints da API                : 2/3  tarefas concluídas
 Fase  6 — Parsing de Arquivos (API)       : 4/4  tarefas concluídas  (6.1 e 6.4 absorvidas por 2.1)
 Fase  7 — Testes da API                   : 0/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 0/2  tarefas concluídas
@@ -343,4 +343,4 @@ Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 18/59 tarefas concluídas
+TOTAL                                     : 19/59 tarefas concluídas

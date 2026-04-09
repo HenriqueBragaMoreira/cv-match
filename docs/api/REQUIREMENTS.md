@@ -50,12 +50,12 @@ Definitions live in `../REQUIREMENTS.md`.
 ### CV Improvement
 
 #### FR-012: Generate improved CV
-- **Status**: `in progress`
-- **Scope (api)**: `POST /improve` endpoint. Receives original resume file (via multipart/form-data), job description, analysis result, provider, and API key. Extracts text from the uploaded file and returns improved resume text.
+- **Status**: `implemented`
+- **Scope (api)**: `POST /improve` endpoint. Receives original resume file (via multipart/form-data), job description, analysis result, provider, and API key. Extracts text from the uploaded file, generates improved CV using the CV improvement prompt, and returns improved resume text with a changes summary.
 
 #### FR-013: Improved CV score
-- **Status**: `refined`
-- **Scope (api)**: After generating the improved CV, automatically run the same ATS analysis and return both the improved CV and its new score in the response.
+- **Status**: `implemented`
+- **Scope (api)**: After generating the improved CV, the `/improve` endpoint automatically re-scores the improved CV using the same ATS analysis prompt (via `RE_SCORING_SYSTEM_PROMPT`) and returns the new score alongside the improved CV and changes summary.
 
 ## Non-Functional Requirements
 
