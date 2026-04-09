@@ -139,7 +139,7 @@ FASE 6 — PARSING DE ARQUIVOS (API)  [depende da Fase 2 para schemas, executar 
 FASE 7 — TESTES DA API
 ================================================================================
 
-7.1  [not implemented] Escrever testes unitários para schemas Zod
+7.1  [done] Escrever testes unitários para schemas Zod
      - Validar que schemas aceitam dados válidos e rejeitam inválidos
 
 7.2  [not implemented] Escrever testes unitários para factory de providers
@@ -334,7 +334,7 @@ Fase  3 — Prompts de IA (API)             : 3/3  tarefas concluídas
 Fase  4 — Serviço de Providers (API)      : 2/2  tarefas concluídas
 Fase  5 — Endpoints da API                : 3/3  tarefas concluídas
 Fase  6 — Parsing de Arquivos (API)       : 4/4  tarefas concluídas  (6.1 e 6.4 absorvidas por 2.1)
-Fase  7 — Testes da API                   : 0/5  tarefas concluídas
+Fase  7 — Testes da API                   : 1/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 0/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 0/6  tarefas concluídas
 Fase 10 — Exibição de Resultados (Web)    : 0/7  tarefas concluídas
@@ -343,4 +343,4 @@ Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 20/59 tarefas concluídas
+TOTAL                                     : 21/59 tarefas concluídas
