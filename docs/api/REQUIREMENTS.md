@@ -12,8 +12,8 @@ Definitions live in `../REQUIREMENTS.md`.
 - **Scope (api)**: Receive resume file via `multipart/form-data`. Accept only `.pdf` and `.tex` files. Extract text content from PDF (using a PDF parsing library compatible with edge runtime) and from `.tex` (strip LaTeX commands to get plain text). Reject unsupported file types with a clear error.
 
 #### FR-003: API key input
-- **Status**: `refined`
-- **Scope (api)**: Receive API key in request header or body. Validate format per provider before forwarding. Never log or persist.
+- **Status**: `implemented`
+- **Scope (api)**: Receive API key in request body. Validate format per provider (OpenAI `sk-`, Anthropic `sk-ant-`, Google `AIza`) via Zod `superRefine` in both `analyzeRequestSchema` and `improveRequestSchema`. Validation logic in `src/utils/api-key-validation.ts`. Never logged or persisted.
 
 #### FR-004: AI provider selection
 - **Status**: `refined`

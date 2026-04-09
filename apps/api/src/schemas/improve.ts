@@ -5,17 +5,29 @@ import {
   analyzeResponseSchema,
   resumeFileSchema,
 } from "./analyze.js";
+import { validateApiKeyFormat } from "../utils/api-key-validation.js";
 
-export const improveRequestSchema = z.object({
-  resumeFile: resumeFileSchema,
-  jobDescription: z
-    .string()
-    .min(1, "Job description is required")
-    .max(50_000, "Job description must not exceed 50 000 characters"),
-  analysisResult: analyzeResponseSchema,
-  provider: aiProvider,
-  apiKey: z.string().min(1, "API key is required"),
-});
+export const improveRequestSchema = z
+  .object({
+    resumeFile: resumeFileSchema,
+    jobDescription: z
+      .string()
+      .min(1, "Job description is required")
+      .max(50_000, "Job description must not exceed 50 000 characters"),
+    analysisResult: analyzeResponseSchema,
+    provider: aiProvider,
+    apiKey: z.string().min(1, "API key is required"),
+  })
+  .superRefine((data, ctx) => {
+    const result = validateApiKeyFormat(data.provider, data.apiKey);
+    if (!result.valid) {
+      ctx.addIssue({
+        code: "custom",
+        message: `Invalid API key format: ${result.hint}`,
+        path: ["apiKey"],
+      });
+    }
+  });
 
 export type ImproveRequest = z.infer<typeof improveRequestSchema>;
 

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { validateApiKeyFormat } from "../utils/api-key-validation.js";
 
 export const aiProvider = z.enum(["openai", "anthropic", "google"]);
 
@@ -22,15 +23,26 @@ export const resumeFileSchema = z
     "Only .pdf and .tex files are accepted"
   );
 
-export const analyzeRequestSchema = z.object({
-  resumeFile: resumeFileSchema,
-  jobDescription: z
-    .string()
-    .min(1, "Job description is required")
-    .max(50_000, "Job description must not exceed 50 000 characters"),
-  provider: aiProvider,
-  apiKey: z.string().min(1, "API key is required"),
-});
+export const analyzeRequestSchema = z
+  .object({
+    resumeFile: resumeFileSchema,
+    jobDescription: z
+      .string()
+      .min(1, "Job description is required")
+      .max(50_000, "Job description must not exceed 50 000 characters"),
+    provider: aiProvider,
+    apiKey: z.string().min(1, "API key is required"),
+  })
+  .superRefine((data, ctx) => {
+    const result = validateApiKeyFormat(data.provider, data.apiKey);
+    if (!result.valid) {
+      ctx.addIssue({
+        code: "custom",
+        message: `Invalid API key format: ${result.hint}`,
+        path: ["apiKey"],
+      });
+    }
+  });
 
 export type AnalyzeRequest = z.infer<typeof analyzeRequestSchema>;
 
