@@ -24,8 +24,8 @@ Definitions live in `../BUSINESS-RULES.md`.
 - **Scope (api)**: API validates the AI response to ensure score is an integer in [0, 100]. If the AI returns an out-of-range value, clamp and log a warning.
 
 ### BR-005: Consistent evaluation criteria
-- **Status**: `refined`
-- **Scope (api)**: The `/improve` endpoint reuses the exact same ATS prompt and parameters as `/analyze` for the re-scoring step.
+- **Status**: `implemented`
+- **Scope (api)**: The `/improve` endpoint reuses the exact same ATS prompt and parameters as `/analyze` for the re-scoring step. Enforced via `src/prompts/re-scoring.ts`, which re-exports the ATS analysis prompt as `RE_SCORING_SYSTEM_PROMPT` and `buildReScoringUserPrompt`.
 
 ## CV Improvement
 

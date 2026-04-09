@@ -73,7 +73,7 @@ FASE 3 — PROMPTS DE IA (API)
      - Reorganizar, reformular e otimizar conteúdo existente
      - Refs: BR-006
 
-3.3  [not implemented] Garantir que o prompt de re-scoring do CV melhorado reutilize o mesmo prompt ATS
+3.3  [done] Garantir que o prompt de re-scoring do CV melhorado reutilize o mesmo prompt ATS
      - O endpoint /improve deve usar exatamente o mesmo prompt e parâmetros do /analyze
      - Refs: BR-005
 
@@ -330,7 +330,7 @@ RESUMO DE PROGRESSO
 
 Fase  1 — Setup & Infraestrutura API     : 5/5  tarefas concluídas
 Fase  2 — Schemas e Validação (API)       : 4/4  tarefas concluídas
-Fase  3 — Prompts de IA (API)             : 2/3  tarefas concluídas
+Fase  3 — Prompts de IA (API)             : 3/3  tarefas concluídas
 Fase  4 — Serviço de Providers (API)      : 0/2  tarefas concluídas
 Fase  5 — Endpoints da API                : 0/3  tarefas concluídas
 Fase  6 — Parsing de Arquivos (API)       : 2/4  tarefas concluídas  (6.1 e 6.4 absorvidas por 2.1)
@@ -343,4 +343,4 @@ Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 12/59 tarefas concluídas
+TOTAL                                     : 13/59 tarefas concluídas

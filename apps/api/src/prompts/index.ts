@@ -7,3 +7,8 @@ export {
   CV_IMPROVEMENT_SYSTEM_PROMPT,
   buildCvImprovementUserPrompt,
 } from "./cv-improvement.js";
+
+export {
+  RE_SCORING_SYSTEM_PROMPT,
+  buildReScoringUserPrompt,
+} from "./re-scoring.js";
