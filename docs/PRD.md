@@ -112,7 +112,7 @@ FASE 5 — ENDPOINTS DA API
      - Retornar CV melhorado + changes summary + novo score
      - Refs: FR-001, FR-012, FR-013, BR-005, BR-006, BR-007
 
-5.3  [not implemented] Implementar health check GET /
+5.3  [done] Implementar health check GET /
      - Endpoint simples para verificar se a API está online
 
 ================================================================================
@@ -332,7 +332,7 @@ Fase  1 — Setup & Infraestrutura API     : 5/5  tarefas concluídas
 Fase  2 — Schemas e Validação (API)       : 4/4  tarefas concluídas
 Fase  3 — Prompts de IA (API)             : 3/3  tarefas concluídas
 Fase  4 — Serviço de Providers (API)      : 2/2  tarefas concluídas
-Fase  5 — Endpoints da API                : 2/3  tarefas concluídas
+Fase  5 — Endpoints da API                : 3/3  tarefas concluídas
 Fase  6 — Parsing de Arquivos (API)       : 4/4  tarefas concluídas  (6.1 e 6.4 absorvidas por 2.1)
 Fase  7 — Testes da API                   : 0/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 0/2  tarefas concluídas
@@ -343,4 +343,4 @@ Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 19/59 tarefas concluídas
+TOTAL                                     : 20/59 tarefas concluídas
