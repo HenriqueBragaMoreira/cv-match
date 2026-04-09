@@ -145,7 +145,7 @@ FASE 7 — TESTES DA API
 7.2  [done] Escrever testes unitários para factory de providers
      - Testar criação de cada provider suportado
 
-7.3  [not implemented] Escrever testes unitários para parsers de arquivo (PDF e LaTeX)
+7.3  [done] Escrever testes unitários para parsers de arquivo (PDF e LaTeX)
      - Testar extração de texto e rejeição de formatos inválidos
 
 7.4  [not implemented] Escrever testes de integração para POST /analyze
@@ -334,7 +334,7 @@ Fase  3 — Prompts de IA (API)             : 3/3  tarefas concluídas
 Fase  4 — Serviço de Providers (API)      : 2/2  tarefas concluídas
 Fase  5 — Endpoints da API                : 3/3  tarefas concluídas
 Fase  6 — Parsing de Arquivos (API)       : 4/4  tarefas concluídas  (6.1 e 6.4 absorvidas por 2.1)
-Fase  7 — Testes da API                   : 2/5  tarefas concluídas
+Fase  7 — Testes da API                   : 3/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 0/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 0/6  tarefas concluídas
 Fase 10 — Exibição de Resultados (Web)    : 0/7  tarefas concluídas
@@ -343,4 +343,4 @@ Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 22/59 tarefas concluídas
+TOTAL                                     : 23/59 tarefas concluídas
