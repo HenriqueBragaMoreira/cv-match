@@ -152,7 +152,7 @@ FASE 7 — TESTES DA API
      - Testar fluxo completo com mock do AI SDK
      - Validar formato de resposta, range de score, campos obrigatórios
 
-7.5  [not implemented] Escrever testes de integração para POST /improve
+7.5  [done] Escrever testes de integração para POST /improve
      - Testar fluxo completo com mock do AI SDK
      - Validar que re-scoring usa mesmo prompt
 
@@ -334,7 +334,7 @@ Fase  3 — Prompts de IA (API)             : 3/3  tarefas concluídas
 Fase  4 — Serviço de Providers (API)      : 2/2  tarefas concluídas
 Fase  5 — Endpoints da API                : 3/3  tarefas concluídas
 Fase  6 — Parsing de Arquivos (API)       : 4/4  tarefas concluídas  (6.1 e 6.4 absorvidas por 2.1)
-Fase  7 — Testes da API                   : 4/5  tarefas concluídas
+Fase  7 — Testes da API                   : 5/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 0/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 0/6  tarefas concluídas
 Fase 10 — Exibição de Resultados (Web)    : 0/7  tarefas concluídas
@@ -343,4 +343,4 @@ Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 24/59 tarefas concluídas
+TOTAL                                     : 25/59 tarefas concluídas
