@@ -222,7 +222,7 @@ FASE 10 — EXIBIÇÃO DE RESULTADOS DA ANÁLISE (WEB)
      - Listas com distinção visual (ícones, cores)
      - Refs: FR-007
 
-10.3 [not implemented] Criar componente de sugestões de melhoria
+10.3 [done] Criar componente de sugestões de melhoria
      - Lista ordenada com indicadores de prioridade
      - Refs: FR-008
 
@@ -337,10 +337,10 @@ Fase  6 — Parsing de Arquivos (API)       : 4/4  tarefas concluídas  (6.1 e 6
 Fase  7 — Testes da API                   : 5/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 2/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 6/6  tarefas concluídas
-Fase 10 — Exibição de Resultados (Web)    : 2/7  tarefas concluídas
+Fase 10 — Exibição de Resultados (Web)    : 3/7  tarefas concluídas
 Fase 11 — Melhoria do CV (Web)            : 0/5  tarefas concluídas
 Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 35/59 tarefas concluídas
+TOTAL                                     : 36/59 tarefas concluídas
