@@ -202,7 +202,7 @@ FASE 9 — FORMULÁRIO DE ANÁLISE (WEB)
      - Validação de campos obrigatórios antes de enviar
      - Refs: FR-005
 
-9.6  [not implemented] Implementar chamada à API /analyze
+9.6  [done] Implementar chamada à API /analyze
      - Enviar dados do formulário como multipart/form-data (arquivo + campos de texto)
      - Tratar erros (key inválida, rate limit, falha de rede, arquivo inválido)
      - Refs: FR-001, FR-005
@@ -336,11 +336,11 @@ Fase  5 — Endpoints da API                : 3/3  tarefas concluídas
 Fase  6 — Parsing de Arquivos (API)       : 4/4  tarefas concluídas  (6.1 e 6.4 absorvidas por 2.1)
 Fase  7 — Testes da API                   : 5/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 2/2  tarefas concluídas
-Fase  9 — Formulário de Análise (Web)     : 5/6  tarefas concluídas
+Fase  9 — Formulário de Análise (Web)     : 6/6  tarefas concluídas
 Fase 10 — Exibição de Resultados (Web)    : 0/7  tarefas concluídas
 Fase 11 — Melhoria do CV (Web)            : 0/5  tarefas concluídas
 Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 32/59 tarefas concluídas
+TOTAL                                     : 33/59 tarefas concluídas

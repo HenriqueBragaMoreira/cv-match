@@ -8,7 +8,7 @@ Definitions live in `../REQUIREMENTS.md`.
 ### Resume Analysis
 
 #### FR-001: Resume file upload
-- **Status**: `refined`
+- **Status**: `implemented`
 - **Scope (web)**: File upload component (drag-and-drop + click to browse). Accepts only `.pdf` and `.tex` files. Shows file name and size after selection. Validates file type client-side before submission. Clear error message for unsupported formats.
 
 #### FR-002: Job description text input
@@ -24,7 +24,7 @@ Definitions live in `../REQUIREMENTS.md`.
 - **Scope (web)**: Dropdown/select component listing supported providers (OpenAI, Anthropic, Google, etc.). Default selection based on most common provider.
 
 #### FR-005: ATS analysis submission
-- **Status**: `refined`
+- **Status**: `implemented`
 - **Scope (web)**: Submit button with loading state. Sends request to API `/analyze` endpoint. Handles errors gracefully (invalid key, rate limit, network failure).
 
 #### FR-006: Match score display

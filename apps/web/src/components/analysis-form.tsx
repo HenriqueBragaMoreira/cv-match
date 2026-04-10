@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Loader2, Search } from "lucide-react";
+import { AlertCircle, Loader2, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,17 +11,24 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ProviderSelect, type AiProvider } from "@/components/provider-select";
 import { ApiKeyInput } from "@/components/api-key-input";
 import { ResumeUpload } from "@/components/resume-upload";
 import { JobDescriptionInput } from "@/components/job-description-input";
+import { analyzeResume, ApiError, type AnalysisResult } from "@/services/api";
 
-export function AnalysisForm() {
+interface AnalysisFormProps {
+  onResult?: (result: AnalysisResult) => void;
+}
+
+export function AnalysisForm({ onResult }: AnalysisFormProps) {
   const [provider, setProvider] = useState<AiProvider | undefined>(undefined);
   const [apiKey, setApiKey] = useState("");
   const [file, setFile] = useState<File | null>(null);
   const [jobDescription, setJobDescription] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const isValid =
     provider !== undefined &&
@@ -29,13 +36,30 @@ export function AnalysisForm() {
     file !== null &&
     jobDescription.trim().length > 0;
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!isValid || isSubmitting) return;
+    if (!isValid || isSubmitting || !provider || !file) return;
 
+    setError(null);
     setIsSubmitting(true);
-    // API call will be wired in task 9.6
-    setIsSubmitting(false);
+
+    try {
+      const result = await analyzeResume({
+        file,
+        jobDescription,
+        provider,
+        apiKey,
+      });
+      onResult?.(result);
+    } catch (err) {
+      if (err instanceof ApiError) {
+        setError(err.message);
+      } else {
+        setError("Ocorreu um erro inesperado. Tente novamente.");
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -63,6 +87,14 @@ export function AnalysisForm() {
             value={jobDescription}
             onChange={setJobDescription}
           />
+
+          {error && (
+            <Alert variant="destructive">
+              <AlertCircle className="size-4" />
+              <AlertTitle>Erro na análise</AlertTitle>
+              <AlertDescription>{error}</AlertDescription>
+            </Alert>
+          )}
         </CardContent>
 
         <CardFooter>
