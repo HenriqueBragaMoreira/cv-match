@@ -211,7 +211,7 @@ FASE 9 — FORMULÁRIO DE ANÁLISE (WEB)
 FASE 10 — EXIBIÇÃO DE RESULTADOS DA ANÁLISE (WEB)
 ================================================================================
 
-10.1 [not implemented] Criar componente de exibição do score principal
+10.1 [done] Criar componente de exibição do score principal
      - Score 0-100 em destaque com indicador visual
      - Cor por faixa: 0-39 vermelho, 40-69 amarelo, 70-100 verde
      - Label explicativo do significado do score
@@ -337,10 +337,10 @@ Fase  6 — Parsing de Arquivos (API)       : 4/4  tarefas concluídas  (6.1 e 6
 Fase  7 — Testes da API                   : 5/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 2/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 6/6  tarefas concluídas
-Fase 10 — Exibição de Resultados (Web)    : 0/7  tarefas concluídas
+Fase 10 — Exibição de Resultados (Web)    : 1/7  tarefas concluídas
 Fase 11 — Melhoria do CV (Web)            : 0/5  tarefas concluídas
 Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 33/59 tarefas concluídas
+TOTAL                                     : 34/59 tarefas concluídas
