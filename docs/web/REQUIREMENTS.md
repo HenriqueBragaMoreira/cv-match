@@ -40,7 +40,7 @@ Definitions live in `../REQUIREMENTS.md`.
 - **Scope (web)**: Ordered list of actionable suggestions with priority indicators.
 
 #### FR-009: Keywords matching analysis
-- **Status**: `refined`
+- **Status**: `implemented`
 - **Scope (web)**: Visual display of matched (✓) and missing (✗) keywords with color coding.
 
 #### FR-010: Section-by-section score breakdown
