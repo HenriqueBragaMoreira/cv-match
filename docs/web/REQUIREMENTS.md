@@ -12,7 +12,7 @@ Definitions live in `../REQUIREMENTS.md`.
 - **Scope (web)**: File upload component (drag-and-drop + click to browse). Accepts only `.pdf` and `.tex` files. Shows file name and size after selection. Validates file type client-side before submission. Clear error message for unsupported formats.
 
 #### FR-002: Job description text input
-- **Status**: `refined`
+- **Status**: `implemented`
 - **Scope (web)**: Textarea component for pasting/typing job description. Clear placeholder text. Character count indicator.
 
 #### FR-003: API key input
