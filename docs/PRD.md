@@ -160,7 +160,7 @@ FASE 7 — TESTES DA API
 FASE 8 — SETUP DO FRONTEND
 ================================================================================
 
-8.1  [not implemented] Instalar dependências necessárias no app web
+8.1  [done] Instalar dependências necessárias no app web
      - Adicionar componentes shadcn/ui necessários (input, textarea, select, card, tabs, alert, etc.)
 
 8.2  [not implemented] Criar layout base da aplicação
@@ -335,7 +335,7 @@ Fase  4 — Serviço de Providers (API)      : 2/2  tarefas concluídas
 Fase  5 — Endpoints da API                : 3/3  tarefas concluídas
 Fase  6 — Parsing de Arquivos (API)       : 4/4  tarefas concluídas  (6.1 e 6.4 absorvidas por 2.1)
 Fase  7 — Testes da API                   : 5/5  tarefas concluídas
-Fase  8 — Setup do Frontend               : 0/2  tarefas concluídas
+Fase  8 — Setup do Frontend               : 1/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 0/6  tarefas concluídas
 Fase 10 — Exibição de Resultados (Web)    : 0/7  tarefas concluídas
 Fase 11 — Melhoria do CV (Web)            : 0/5  tarefas concluídas
@@ -343,4 +343,4 @@ Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 25/59 tarefas concluídas
+TOTAL                                     : 26/59 tarefas concluídas
