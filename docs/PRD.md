@@ -178,7 +178,7 @@ FASE 9 — FORMULÁRIO DE ANÁLISE (WEB)
      - Dropdown listando providers suportados (OpenAI, Anthropic, Google)
      - Refs: FR-004
 
-9.2  [not implemented] Criar componente de input de API key
+9.2  [done] Criar componente de input de API key
      - Campo tipo password com toggle de visibilidade
      - Placeholder com dica por provider selecionado
      - Armazenar apenas em React state
@@ -336,11 +336,11 @@ Fase  5 — Endpoints da API                : 3/3  tarefas concluídas
 Fase  6 — Parsing de Arquivos (API)       : 4/4  tarefas concluídas  (6.1 e 6.4 absorvidas por 2.1)
 Fase  7 — Testes da API                   : 5/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 2/2  tarefas concluídas
-Fase  9 — Formulário de Análise (Web)     : 1/6  tarefas concluídas
+Fase  9 — Formulário de Análise (Web)     : 2/6  tarefas concluídas
 Fase 10 — Exibição de Resultados (Web)    : 0/7  tarefas concluídas
 Fase 11 — Melhoria do CV (Web)            : 0/5  tarefas concluídas
 Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 28/59 tarefas concluídas
+TOTAL                                     : 29/59 tarefas concluídas
