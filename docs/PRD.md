@@ -230,7 +230,7 @@ FASE 10 — EXIBIÇÃO DE RESULTADOS DA ANÁLISE (WEB)
      - Keywords presentes (✓) e ausentes (✗) com cores
      - Refs: FR-009
 
-10.5 [not implemented] Criar componente de breakdown por seção
+10.5 [done] Criar componente de breakdown por seção
      - Barras de progresso por categoria (experiência, habilidades, educação, certificações)
      - Refs: FR-010
 
@@ -337,10 +337,10 @@ Fase  6 — Parsing de Arquivos (API)       : 4/4  tarefas concluídas  (6.1 e 6
 Fase  7 — Testes da API                   : 5/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 2/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 6/6  tarefas concluídas
-Fase 10 — Exibição de Resultados (Web)    : 4/7  tarefas concluídas
+Fase 10 — Exibição de Resultados (Web)    : 5/7  tarefas concluídas
 Fase 11 — Melhoria do CV (Web)            : 0/5  tarefas concluídas
 Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 37/59 tarefas concluídas
+TOTAL                                     : 38/59 tarefas concluídas
