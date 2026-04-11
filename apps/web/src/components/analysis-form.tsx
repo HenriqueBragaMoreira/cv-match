@@ -81,8 +81,8 @@ export function AnalysisForm({ onResult }: AnalysisFormProps) {
       </CardHeader>
 
       <form onSubmit={handleSubmit}>
-        <CardContent className="space-y-6">
-          <div className="grid gap-6 sm:grid-cols-2">
+        <CardContent className="space-y-4 sm:space-y-6">
+          <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
             <ProviderSelect value={provider} onValueChange={setProvider} />
             <ApiKeyInput
               provider={provider}

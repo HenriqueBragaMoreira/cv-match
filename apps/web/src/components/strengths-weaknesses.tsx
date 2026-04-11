@@ -13,7 +13,7 @@ export function StrengthsWeaknesses({
   weaknesses,
 }: StrengthsWeaknessesProps) {
   return (
-    <div className="grid gap-6 sm:grid-cols-2">
+    <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-green-600 dark:text-green-400">

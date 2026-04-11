@@ -43,31 +43,33 @@ export function ScoreComparison({
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="flex items-center justify-center gap-4 sm:gap-6">
-          <div className="flex flex-col items-center gap-1">
-            <span className="text-xs text-muted-foreground">Original</span>
-            <span
-              className={cn(
-                "text-3xl font-bold tabular-nums",
-                getScoreColor(clampedOriginal)
-              )}
-            >
-              {clampedOriginal}
-            </span>
-          </div>
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+          <div className="flex items-center gap-4 sm:gap-6">
+            <div className="flex flex-col items-center gap-1">
+              <span className="text-xs text-muted-foreground">Original</span>
+              <span
+                className={cn(
+                  "text-3xl font-bold tabular-nums",
+                  getScoreColor(clampedOriginal)
+                )}
+              >
+                {clampedOriginal}
+              </span>
+            </div>
 
-          <ArrowRight className="size-5 text-muted-foreground" />
+            <ArrowRight className="size-5 text-muted-foreground" />
 
-          <div className="flex flex-col items-center gap-1">
-            <span className="text-xs text-muted-foreground">Melhorado</span>
-            <span
-              className={cn(
-                "text-3xl font-bold tabular-nums",
-                getScoreColor(clampedNew)
-              )}
-            >
-              {clampedNew}
-            </span>
+            <div className="flex flex-col items-center gap-1">
+              <span className="text-xs text-muted-foreground">Melhorado</span>
+              <span
+                className={cn(
+                  "text-3xl font-bold tabular-nums",
+                  getScoreColor(clampedNew)
+                )}
+              >
+                {clampedNew}
+              </span>
+            </div>
           </div>
 
           <div className="flex flex-col items-center gap-1">

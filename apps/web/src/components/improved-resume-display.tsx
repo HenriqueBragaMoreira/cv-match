@@ -62,7 +62,7 @@ export function ImprovedResumeDisplay({ result }: ImprovedResumeDisplayProps) {
           </div>
         </CardHeader>
         <CardContent>
-          <pre className="bg-muted whitespace-pre-wrap rounded-lg p-4 font-mono text-sm leading-relaxed">
+          <pre className="bg-muted overflow-x-auto whitespace-pre-wrap break-words rounded-lg p-3 font-mono text-xs leading-relaxed sm:p-4 sm:text-sm">
             {result.improvedResume}
           </pre>
         </CardContent>
