@@ -265,7 +265,7 @@ FASE 11 — MELHORIA DO CV (WEB)
      - Indicador de delta (ex: "+25 pontos")
      - Refs: FR-013
 
-11.5 [not implemented] Criar botão de download do CV melhorado
+11.5 [done] Criar botão de download do CV melhorado
      - Download em formato texto (plain text)
      - Nome do arquivo: "cv-melhorado-[data].txt"
      - Refs: FR-014
@@ -338,9 +338,9 @@ Fase  7 — Testes da API                   : 5/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 2/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 6/6  tarefas concluídas
 Fase 10 — Exibição de Resultados (Web)    : 7/7  tarefas concluídas
-Fase 11 — Melhoria do CV (Web)            : 4/5  tarefas concluídas
+Fase 11 — Melhoria do CV (Web)            : 5/5  tarefas concluídas
 Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 44/59 tarefas concluídas
+TOTAL                                     : 45/59 tarefas concluídas

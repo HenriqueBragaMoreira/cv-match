@@ -85,7 +85,7 @@
 
 #### FR-014: Download improved CV
 
-- **Status**: `refined`
+- **Status**: `implemented`
 - **Description**: The user can download the AI-generated improved resume. The download format should be user-friendly (e.g., plain text, markdown, or PDF).
 
 ## Non-Functional Requirements

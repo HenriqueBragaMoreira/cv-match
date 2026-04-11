@@ -62,7 +62,7 @@ Definitions live in `../REQUIREMENTS.md`.
 - **Scope (web)**: Side-by-side comparison of original vs improved score. Visual delta indicator (e.g., "+25 points").
 
 #### FR-014: Download improved CV
-- **Status**: `refined`
+- **Status**: `implemented`
 - **Scope (web)**: Download button supporting at least plain text format. Clear file naming (e.g., "cv-improved-[date].txt").
 
 ## Non-Functional Requirements
