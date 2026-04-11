@@ -9,6 +9,7 @@ import { KeywordsAnalysis } from "@/components/keywords-analysis";
 import { SectionBreakdown } from "@/components/section-breakdown";
 import { FormattingWarnings } from "@/components/formatting-warnings";
 import { ImprovedResumeDisplay } from "@/components/improved-resume-display";
+import { ScoreComparison } from "@/components/score-comparison";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import type { AnalysisResult, ImproveResult } from "@/services/api";
 
@@ -92,7 +93,15 @@ export function AnalysisResults({
         </Button>
       )}
 
-      {improveResult && <ImprovedResumeDisplay result={improveResult} />}
+      {improveResult && (
+        <>
+          <ScoreComparison
+            originalScore={result.score}
+            newScore={improveResult.newScore}
+          />
+          <ImprovedResumeDisplay result={improveResult} />
+        </>
+      )}
     </div>
   );
 }

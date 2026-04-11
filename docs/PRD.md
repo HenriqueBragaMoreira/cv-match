@@ -260,7 +260,7 @@ FASE 11 — MELHORIA DO CV (WEB)
      - Resumo das mudanças realizadas (changes summary)
      - Refs: FR-012, BR-007
 
-11.4 [not implemented] Criar componente de comparação de scores
+11.4 [done] Criar componente de comparação de scores
      - Score original vs score melhorado lado a lado
      - Indicador de delta (ex: "+25 pontos")
      - Refs: FR-013
@@ -338,9 +338,9 @@ Fase  7 — Testes da API                   : 5/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 2/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 6/6  tarefas concluídas
 Fase 10 — Exibição de Resultados (Web)    : 7/7  tarefas concluídas
-Fase 11 — Melhoria do CV (Web)            : 3/5  tarefas concluídas
+Fase 11 — Melhoria do CV (Web)            : 4/5  tarefas concluídas
 Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 43/59 tarefas concluídas
+TOTAL                                     : 44/59 tarefas concluídas

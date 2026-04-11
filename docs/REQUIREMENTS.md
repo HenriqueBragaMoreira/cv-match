@@ -80,7 +80,7 @@
 
 #### FR-013: Improved CV score
 
-- **Status**: `refined`
+- **Status**: `implemented`
 - **Description**: The system automatically runs the same ATS analysis on the improved CV and displays the new score alongside the original for comparison.
 
 #### FR-014: Download improved CV

@@ -58,7 +58,7 @@ Definitions live in `../REQUIREMENTS.md`.
 - **Scope (web)**: "Improve my CV" button visible after analysis results. Loading state during generation. Display the improved CV in a readable format.
 
 #### FR-013: Improved CV score
-- **Status**: `refined`
+- **Status**: `implemented`
 - **Scope (web)**: Side-by-side comparison of original vs improved score. Visual delta indicator (e.g., "+25 points").
 
 #### FR-014: Download improved CV
