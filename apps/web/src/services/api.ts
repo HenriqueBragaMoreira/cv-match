@@ -18,6 +18,12 @@ export interface AnalysisResult {
   formattingWarnings: string[];
 }
 
+export interface ImproveResult {
+  improvedResume: string;
+  changes: string;
+  newScore: number;
+}
+
 interface ApiErrorBody {
   error: {
     code: string;
@@ -93,4 +99,52 @@ export async function analyzeResume(params: {
   }
 
   return (await response.json()) as AnalysisResult;
+}
+
+export async function improveResume(params: {
+  file: File;
+  jobDescription: string;
+  analysisResult: AnalysisResult;
+  provider: string;
+  apiKey: string;
+}): Promise<ImproveResult> {
+  const formData = new FormData();
+  formData.append("resumeFile", params.file);
+  formData.append("jobDescription", params.jobDescription);
+  formData.append("analysisResult", JSON.stringify(params.analysisResult));
+  formData.append("provider", params.provider);
+  formData.append("apiKey", params.apiKey);
+
+  let response: Response;
+  try {
+    response = await fetch(`${API_BASE_URL}/improve`, {
+      method: "POST",
+      body: formData,
+    });
+  } catch {
+    throw new ApiError(
+      "NETWORK_ERROR",
+      0,
+      "Não foi possível conectar ao servidor. Verifique sua conexão e tente novamente."
+    );
+  }
+
+  if (!response.ok) {
+    let body: ApiErrorBody | undefined;
+    try {
+      body = (await response.json()) as ApiErrorBody;
+    } catch {
+      // response body is not JSON
+    }
+
+    const code = body?.error?.code ?? "UNKNOWN_ERROR";
+    const message = userFacingMessage(
+      code,
+      body?.error?.message ?? "Erro desconhecido. Tente novamente."
+    );
+
+    throw new ApiError(code, response.status, message);
+  }
+
+  return (await response.json()) as ImproveResult;
 }
