@@ -27,8 +27,14 @@ export function JobDescriptionInput({
           }
         }}
         rows={6}
+        aria-describedby="job-description-counter"
       />
-      <p className="text-xs text-muted-foreground text-right">
+      <p
+        id="job-description-counter"
+        className="text-xs text-muted-foreground text-right"
+        aria-live="polite"
+        aria-atomic="true"
+      >
         {value.length.toLocaleString("pt-BR")}/
         {MAX_CHARS.toLocaleString("pt-BR")} caracteres
       </p>

@@ -57,7 +57,10 @@ export function ScoreComparison({
               </span>
             </div>
 
-            <ArrowRight className="size-5 text-muted-foreground" />
+            <ArrowRight
+              className="size-5 text-muted-foreground"
+              aria-hidden="true"
+            />
 
             <div className="flex flex-col items-center gap-1">
               <span className="text-xs text-muted-foreground">Melhorado</span>

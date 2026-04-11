@@ -85,7 +85,10 @@ export function ResumeUpload({ file, onFileChange }: ResumeUploadProps) {
       {file ? (
         <div className="flex items-center justify-between rounded-3xl border border-border bg-input/50 px-4 py-3">
           <div className="flex items-center gap-3 min-w-0">
-            <FileUp className="size-5 shrink-0 text-muted-foreground" />
+            <FileUp
+              className="size-5 shrink-0 text-muted-foreground"
+              aria-hidden="true"
+            />
             <div className="min-w-0">
               <p className="truncate text-sm font-medium">{file.name}</p>
               <p className="text-xs text-muted-foreground">
@@ -110,13 +113,14 @@ export function ResumeUpload({ file, onFileChange }: ResumeUploadProps) {
           onDrop={handleDrop}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
-          className={`flex w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-3xl border-2 border-dashed px-4 py-8 text-center transition-colors ${
+          aria-label="Selecionar arquivo de currículo (.pdf ou .tex, máx. 10 MB)"
+          className={`flex w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-3xl border-2 border-dashed px-4 py-8 text-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
             dragOver
               ? "border-ring bg-ring/10"
               : "border-border hover:border-ring/50 hover:bg-input/30"
           }`}
         >
-          <FileUp className="size-8 text-muted-foreground" />
+          <FileUp className="size-8 text-muted-foreground" aria-hidden="true" />
           <div>
             <p className="text-sm font-medium">
               Arraste e solte ou clique para selecionar
@@ -132,7 +136,9 @@ export function ResumeUpload({ file, onFileChange }: ResumeUploadProps) {
         ref={inputRef}
         type="file"
         accept=".pdf,.tex"
-        className="hidden"
+        className="sr-only"
+        aria-label="Upload de currículo"
+        tabIndex={-1}
         onChange={(e) => {
           const selected = e.target.files?.[0];
           if (selected) handleFile(selected);

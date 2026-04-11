@@ -55,7 +55,11 @@ export function SectionBreakdown({ breakdown }: SectionBreakdownProps) {
                     {score}
                   </span>
                 </div>
-                <Progress value={score} className={getBarColor(score)} />
+                <Progress
+                  value={score}
+                  className={getBarColor(score)}
+                  aria-label={`${label}: ${score} de 100`}
+                />
               </div>
             );
           })}

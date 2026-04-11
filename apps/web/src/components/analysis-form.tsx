@@ -114,15 +114,12 @@ export function AnalysisForm({ onResult }: AnalysisFormProps) {
           >
             {isSubmitting ? (
               <>
-                <Loader2
-                  className="size-4 animate-spin"
-                  data-icon="inline-start"
-                />
+                <Loader2 className="size-4 animate-spin" aria-hidden="true" />
                 Analisando...
               </>
             ) : (
               <>
-                <Search className="size-4" data-icon="inline-start" />
+                <Search className="size-4" aria-hidden="true" />
                 Analisar currículo
               </>
             )}

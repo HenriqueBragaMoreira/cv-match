@@ -37,7 +37,11 @@ export function ScoreDisplay({ score }: ScoreDisplayProps) {
   const offset = CIRCUMFERENCE - (clampedScore / 100) * CIRCUMFERENCE;
 
   return (
-    <div className="flex flex-col items-center gap-3">
+    <div
+      className="flex flex-col items-center gap-3"
+      aria-label={`Pontuação ATS: ${clampedScore} de 100. ${label}`}
+      role="img"
+    >
       <div className="relative size-40">
         <svg className="-rotate-90" viewBox="0 0 120 120" aria-hidden="true">
           <circle

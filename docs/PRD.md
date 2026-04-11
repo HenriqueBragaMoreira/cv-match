@@ -285,7 +285,7 @@ FASE 12 — RESPONSIVIDADE E POLISH (WEB)
 12.3 [done] Adicionar estados de loading, erro e vazio em todas as interações
      - Feedback visual para cada ação do usuário
 
-12.4 [not implemented] Revisar acessibilidade (labels, contraste, navegação por teclado)
+12.4 [done] Revisar acessibilidade (labels, contraste, navegação por teclado)
 
 ================================================================================
 FASE 13 — TESTES DO FRONTEND
@@ -339,8 +339,8 @@ Fase  8 — Setup do Frontend               : 2/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 6/6  tarefas concluídas
 Fase 10 — Exibição de Resultados (Web)    : 7/7  tarefas concluídas
 Fase 11 — Melhoria do CV (Web)            : 5/5  tarefas concluídas
-Fase 12 — Responsividade e Polish (Web)   : 3/4  tarefas concluídas
+Fase 12 — Responsividade e Polish (Web)   : 4/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 48/59 tarefas concluídas
+TOTAL                                     : 49/59 tarefas concluídas

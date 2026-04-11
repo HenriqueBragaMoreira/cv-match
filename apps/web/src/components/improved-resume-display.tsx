@@ -55,16 +55,19 @@ export function ImprovedResumeDisplay({ result }: ImprovedResumeDisplayProps) {
               variant="outline"
               size="sm"
               onClick={() => handleDownload(result.improvedResume)}
+              aria-label="Baixar CV melhorado em formato texto"
             >
-              <Download className="size-4" />
+              <Download className="size-4" aria-hidden="true" />
               Baixar CV
             </Button>
           </div>
         </CardHeader>
         <CardContent>
-          <pre className="bg-muted overflow-x-auto whitespace-pre-wrap break-words rounded-lg p-3 font-mono text-xs leading-relaxed sm:p-4 sm:text-sm">
-            {result.improvedResume}
-          </pre>
+          <section aria-label="Texto do currículo melhorado">
+            <pre className="bg-muted overflow-x-auto whitespace-pre-wrap break-words rounded-lg p-3 font-mono text-xs leading-relaxed sm:p-4 sm:text-sm">
+              {result.improvedResume}
+            </pre>
+          </section>
         </CardContent>
       </Card>
     </div>

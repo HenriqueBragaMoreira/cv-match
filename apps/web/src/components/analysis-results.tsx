@@ -39,7 +39,7 @@ export function AnalysisResults({
           onClick={onBack}
           disabled={isImproving}
         >
-          <ArrowLeft className="size-4" />
+          <ArrowLeft className="size-4" aria-hidden="true" />
           Nova análise
         </Button>
       </div>
@@ -79,15 +79,12 @@ export function AnalysisResults({
           >
             {isImproving ? (
               <>
-                <Loader2
-                  className="size-4 animate-spin"
-                  data-icon="inline-start"
-                />
+                <Loader2 className="size-4 animate-spin" aria-hidden="true" />
                 Melhorando seu CV...
               </>
             ) : (
               <>
-                <Sparkles className="size-4" data-icon="inline-start" />
+                <Sparkles className="size-4" aria-hidden="true" />
                 Melhorar meu CV
               </>
             )}
