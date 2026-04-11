@@ -28,15 +28,15 @@ Definitions live in `../REQUIREMENTS.md`.
 - **Scope (web)**: Submit button with loading state. Sends request to API `/analyze` endpoint. Handles errors gracefully (invalid key, rate limit, network failure).
 
 #### FR-006: Match score display
-- **Status**: `refined`
+- **Status**: `implemented`
 - **Scope (web)**: Prominent score display (0-100) with visual indicator (color-coded: red/yellow/green). Clear label explaining what the score means.
 
 #### FR-007: Strengths and weaknesses
-- **Status**: `refined`
+- **Status**: `implemented`
 - **Scope (web)**: Two-column or tabbed layout showing strengths and weaknesses as lists with clear visual distinction (icons, colors).
 
 #### FR-008: Improvement suggestions
-- **Status**: `refined`
+- **Status**: `implemented`
 - **Scope (web)**: Ordered list of actionable suggestions with priority indicators.
 
 #### FR-009: Keywords matching analysis
@@ -44,7 +44,7 @@ Definitions live in `../REQUIREMENTS.md`.
 - **Scope (web)**: Visual display of matched (✓) and missing (✗) keywords with color coding.
 
 #### FR-010: Section-by-section score breakdown
-- **Status**: `refined`
+- **Status**: `implemented`
 - **Scope (web)**: Bar chart or progress bars showing per-category scores (experience, skills, education, certifications).
 
 #### FR-011: ATS formatting warnings
