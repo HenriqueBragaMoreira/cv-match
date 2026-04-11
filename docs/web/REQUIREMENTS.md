@@ -48,7 +48,7 @@ Definitions live in `../REQUIREMENTS.md`.
 - **Scope (web)**: Bar chart or progress bars showing per-category scores (experience, skills, education, certifications).
 
 #### FR-011: ATS formatting warnings
-- **Status**: `refined`
+- **Status**: `implemented`
 - **Scope (web)**: Warning banner or alert list highlighting formatting issues with fix suggestions.
 
 ### CV Improvement
