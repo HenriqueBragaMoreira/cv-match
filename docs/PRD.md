@@ -255,7 +255,7 @@ FASE 11 — MELHORIA DO CV (WEB)
      - Enviar arquivo do currículo original, job description e resultado da análise via multipart/form-data
      - Refs: FR-001, FR-012
 
-11.3 [not implemented] Criar componente de exibição do CV melhorado
+11.3 [done] Criar componente de exibição do CV melhorado
      - Texto formatado e legível do CV gerado
      - Resumo das mudanças realizadas (changes summary)
      - Refs: FR-012, BR-007
@@ -338,9 +338,9 @@ Fase  7 — Testes da API                   : 5/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 2/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 6/6  tarefas concluídas
 Fase 10 — Exibição de Resultados (Web)    : 7/7  tarefas concluídas
-Fase 11 — Melhoria do CV (Web)            : 2/5  tarefas concluídas
+Fase 11 — Melhoria do CV (Web)            : 3/5  tarefas concluídas
 Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 42/59 tarefas concluídas
+TOTAL                                     : 43/59 tarefas concluídas
