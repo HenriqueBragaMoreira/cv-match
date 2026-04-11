@@ -19,7 +19,15 @@ import { JobDescriptionInput } from "@/components/job-description-input";
 import { analyzeResume, ApiError, type AnalysisResult } from "@/services/api";
 
 interface AnalysisFormProps {
-  onResult?: (result: AnalysisResult) => void;
+  onResult?: (
+    result: AnalysisResult,
+    context: {
+      file: File;
+      jobDescription: string;
+      provider: string;
+      apiKey: string;
+    }
+  ) => void;
 }
 
 export function AnalysisForm({ onResult }: AnalysisFormProps) {
@@ -50,7 +58,7 @@ export function AnalysisForm({ onResult }: AnalysisFormProps) {
         provider,
         apiKey,
       });
-      onResult?.(result);
+      onResult?.(result, { file, jobDescription, provider, apiKey });
     } catch (err) {
       if (err instanceof ApiError) {
         setError(err.message);

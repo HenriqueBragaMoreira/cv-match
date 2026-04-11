@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Loader2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScoreDisplay } from "@/components/score-display";
 import { StrengthsWeaknesses } from "@/components/strengths-weaknesses";
@@ -13,13 +13,25 @@ import type { AnalysisResult } from "@/services/api";
 interface AnalysisResultsProps {
   result: AnalysisResult;
   onBack: () => void;
+  onImprove: () => void;
+  isImproving: boolean;
 }
 
-export function AnalysisResults({ result, onBack }: AnalysisResultsProps) {
+export function AnalysisResults({
+  result,
+  onBack,
+  onImprove,
+  isImproving,
+}: AnalysisResultsProps) {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-4">
-        <Button variant="ghost" size="sm" onClick={onBack}>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={onBack}
+          disabled={isImproving}
+        >
           <ArrowLeft className="size-4" />
           Nova análise
         </Button>
@@ -42,6 +54,25 @@ export function AnalysisResults({ result, onBack }: AnalysisResultsProps) {
       <SuggestionsList suggestions={result.suggestions} />
 
       <FormattingWarnings warnings={result.formattingWarnings} />
+
+      <Button
+        size="lg"
+        className="w-full"
+        onClick={onImprove}
+        disabled={isImproving}
+      >
+        {isImproving ? (
+          <>
+            <Loader2 className="size-4 animate-spin" data-icon="inline-start" />
+            Melhorando seu CV...
+          </>
+        ) : (
+          <>
+            <Sparkles className="size-4" data-icon="inline-start" />
+            Melhorar meu CV
+          </>
+        )}
+      </Button>
     </div>
   );
 }

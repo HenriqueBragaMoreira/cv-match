@@ -247,7 +247,7 @@ FASE 10 — EXIBIÇÃO DE RESULTADOS DA ANÁLISE (WEB)
 FASE 11 — MELHORIA DO CV (WEB)
 ================================================================================
 
-11.1 [not implemented] Criar botão "Melhorar meu CV" visível após resultados
+11.1 [done] Criar botão "Melhorar meu CV" visível após resultados
      - Estado de loading durante geração
      - Refs: FR-012
 
@@ -338,9 +338,9 @@ Fase  7 — Testes da API                   : 5/5  tarefas concluídas
 Fase  8 — Setup do Frontend               : 2/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 6/6  tarefas concluídas
 Fase 10 — Exibição de Resultados (Web)    : 7/7  tarefas concluídas
-Fase 11 — Melhoria do CV (Web)            : 0/5  tarefas concluídas
+Fase 11 — Melhoria do CV (Web)            : 1/5  tarefas concluídas
 Fase 12 — Responsividade e Polish (Web)   : 0/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 40/59 tarefas concluídas
+TOTAL                                     : 41/59 tarefas concluídas
