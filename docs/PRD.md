@@ -278,7 +278,7 @@ FASE 12 — RESPONSIVIDADE E POLISH (WEB)
      - Testar layout de 320px até desktop
      - Refs: NFR-008
 
-12.2 [not implemented] Revisar todos os textos da interface em pt-BR
+12.2 [done] Revisar todos os textos da interface em pt-BR
      - Verificar placeholders, labels, mensagens de erro, tooltips
      - Refs: NFR-006
 
@@ -339,8 +339,8 @@ Fase  8 — Setup do Frontend               : 2/2  tarefas concluídas
 Fase  9 — Formulário de Análise (Web)     : 6/6  tarefas concluídas
 Fase 10 — Exibição de Resultados (Web)    : 7/7  tarefas concluídas
 Fase 11 — Melhoria do CV (Web)            : 5/5  tarefas concluídas
-Fase 12 — Responsividade e Polish (Web)   : 1/4  tarefas concluídas
+Fase 12 — Responsividade e Polish (Web)   : 2/4  tarefas concluídas
 Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 46/59 tarefas concluídas
+TOTAL                                     : 47/59 tarefas concluídas

@@ -39,7 +39,7 @@ export function ScoreComparison({
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <TrendingUp className="size-5 text-blue-600 dark:text-blue-400" />
-          Comparacao de scores
+          Comparação de pontuações
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -73,7 +73,7 @@ export function ScoreComparison({
           </div>
 
           <div className="flex flex-col items-center gap-1">
-            <span className="text-xs text-muted-foreground">Delta</span>
+            <span className="text-xs text-muted-foreground">Diferença</span>
             <span
               className={cn(
                 "text-2xl font-bold tabular-nums",

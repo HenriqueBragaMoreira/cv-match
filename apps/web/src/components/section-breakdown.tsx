@@ -38,7 +38,7 @@ export function SectionBreakdown({ breakdown }: SectionBreakdownProps) {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <BarChart3 className="size-4" />
-          Breakdown por seção
+          Detalhamento por seção
         </CardTitle>
       </CardHeader>
       <CardContent>
