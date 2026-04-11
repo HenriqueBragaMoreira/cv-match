@@ -42,24 +42,30 @@ export function SuggestionsList({ suggestions }: SuggestionsListProps) {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <ol className="space-y-3">
-          {suggestions.map((suggestion, index) => {
-            const priority = getPriorityLabel(index);
-            return (
-              <li key={suggestion} className="flex gap-3 text-sm">
-                <span className="mt-0.5 flex shrink-0 items-center gap-2">
-                  <span className="flex size-5 items-center justify-center rounded-full bg-muted text-xs font-medium tabular-nums">
-                    {index + 1}
+        {suggestions.length === 0 ? (
+          <p className="text-sm text-muted-foreground">
+            Nenhuma sugestão de melhoria identificada.
+          </p>
+        ) : (
+          <ol className="space-y-3">
+            {suggestions.map((suggestion, index) => {
+              const priority = getPriorityLabel(index);
+              return (
+                <li key={suggestion} className="flex gap-3 text-sm">
+                  <span className="mt-0.5 flex shrink-0 items-center gap-2">
+                    <span className="flex size-5 items-center justify-center rounded-full bg-muted text-xs font-medium tabular-nums">
+                      {index + 1}
+                    </span>
+                    <Badge variant="outline" className={priority.className}>
+                      {priority.label}
+                    </Badge>
                   </span>
-                  <Badge variant="outline" className={priority.className}>
-                    {priority.label}
-                  </Badge>
-                </span>
-                <span>{suggestion}</span>
-              </li>
-            );
-          })}
-        </ol>
+                  <span>{suggestion}</span>
+                </li>
+              );
+            })}
+          </ol>
+        )}
       </CardContent>
     </Card>
   );

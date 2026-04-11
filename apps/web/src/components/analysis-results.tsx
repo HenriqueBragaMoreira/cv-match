@@ -70,27 +70,35 @@ export function AnalysisResults({
       )}
 
       {!improveResult && (
-        <Button
-          size="lg"
-          className="w-full"
-          onClick={onImprove}
-          disabled={isImproving}
-        >
-          {isImproving ? (
-            <>
-              <Loader2
-                className="size-4 animate-spin"
-                data-icon="inline-start"
-              />
-              Melhorando seu CV...
-            </>
-          ) : (
-            <>
-              <Sparkles className="size-4" data-icon="inline-start" />
-              Melhorar meu CV
-            </>
+        <div className="space-y-2">
+          <Button
+            size="lg"
+            className="w-full"
+            onClick={onImprove}
+            disabled={isImproving}
+          >
+            {isImproving ? (
+              <>
+                <Loader2
+                  className="size-4 animate-spin"
+                  data-icon="inline-start"
+                />
+                Melhorando seu CV...
+              </>
+            ) : (
+              <>
+                <Sparkles className="size-4" data-icon="inline-start" />
+                Melhorar meu CV
+              </>
+            )}
+          </Button>
+          {isImproving && (
+            <p className="text-center text-xs text-muted-foreground">
+              A IA está reescrevendo seu currículo e recalculando a pontuação.
+              Isso pode levar até um minuto.
+            </p>
           )}
-        </Button>
+        </div>
       )}
 
       {improveResult && (

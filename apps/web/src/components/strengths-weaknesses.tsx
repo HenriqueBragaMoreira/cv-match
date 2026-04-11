@@ -22,16 +22,22 @@ export function StrengthsWeaknesses({
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="space-y-2">
-            {strengths.map((item) => (
-              <li key={item} className="flex gap-2 text-sm">
-                <span className="mt-0.5 text-green-500" aria-hidden="true">
-                  ✓
-                </span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          {strengths.length === 0 ? (
+            <p className="text-sm text-muted-foreground">
+              Nenhum ponto forte identificado.
+            </p>
+          ) : (
+            <ul className="space-y-2">
+              {strengths.map((item) => (
+                <li key={item} className="flex gap-2 text-sm">
+                  <span className="mt-0.5 text-green-500" aria-hidden="true">
+                    ✓
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </CardContent>
       </Card>
 
@@ -43,16 +49,22 @@ export function StrengthsWeaknesses({
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="space-y-2">
-            {weaknesses.map((item) => (
-              <li key={item} className="flex gap-2 text-sm">
-                <span className="mt-0.5 text-red-500" aria-hidden="true">
-                  ✗
-                </span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          {weaknesses.length === 0 ? (
+            <p className="text-sm text-muted-foreground">
+              Nenhum ponto fraco identificado.
+            </p>
+          ) : (
+            <ul className="space-y-2">
+              {weaknesses.map((item) => (
+                <li key={item} className="flex gap-2 text-sm">
+                  <span className="mt-0.5 text-red-500" aria-hidden="true">
+                    ✗
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </CardContent>
       </Card>
     </div>

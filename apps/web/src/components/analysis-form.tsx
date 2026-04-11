@@ -105,7 +105,7 @@ export function AnalysisForm({ onResult }: AnalysisFormProps) {
           )}
         </CardContent>
 
-        <CardFooter>
+        <CardFooter className="flex-col gap-2">
           <Button
             type="submit"
             size="lg"
@@ -127,6 +127,12 @@ export function AnalysisForm({ onResult }: AnalysisFormProps) {
               </>
             )}
           </Button>
+          {isSubmitting && (
+            <p className="text-center text-xs text-muted-foreground">
+              A IA está analisando seu currículo. Isso pode levar alguns
+              segundos.
+            </p>
+          )}
         </CardFooter>
       </form>
     </Card>
