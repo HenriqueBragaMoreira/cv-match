@@ -1,159 +1,118 @@
-# Turborepo starter
+# CV Match
 
-This Turborepo starter is maintained by the Turborepo core team.
+Ferramenta open-source de análise ATS (Applicant Tracking System) com IA. Cole seu currículo e uma descrição de vaga para receber uma pontuação de 0 a 100, análise de pontos fortes/fracos, correspondência de palavras-chave, sugestões de melhoria e a opção de gerar um CV otimizado para a vaga. O usuário fornece sua própria chave de API (BYOK) e escolhe o provedor de IA.
 
-## Using this example
+## Tech Stack
 
-Run the following command:
+| Camada | Tecnologia |
+|--------|-----------|
+| Monorepo | Turborepo + pnpm |
+| API | Hono + Cloudflare Workers |
+| Frontend | Next.js 16 + React 19 + shadcn/ui + Tailwind CSS 4 |
+| IA | Vercel AI SDK (OpenAI, Anthropic, Google) |
+| Validação | Zod |
+| Qualidade | TypeScript, Biome, Vitest, Lefthook |
 
-```sh
-npx create-turbo@latest
+## Estrutura do Projeto
+
+```
+cv-match/
+├── apps/
+│   ├── api/          # API — Hono + Cloudflare Workers
+│   └── web/          # Frontend — Next.js 16
+├── docs/             # Requisitos, regras de negócio, PRD
+├── scripts/          # Scripts utilitários
+├── turbo.json        # Configuração do Turborepo
+└── pnpm-workspace.yaml
 ```
 
-## What's inside?
+## Pre-requisitos
 
-This Turborepo includes the following packages/apps:
+- [Node.js](https://nodejs.org/) >= 18
+- [pnpm](https://pnpm.io/) 10.33.0+
 
-### Apps and Packages
+## Instalação
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/cv-match.git
+cd cv-match
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo build
+# Instale as dependências
+pnpm install
 ```
 
-Without global `turbo`, use your package manager:
+## Rodando em Desenvolvimento
 
-```sh
-cd my-turborepo
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
+```bash
+# Inicia API (porta 8787) e Web (porta 3000) simultaneamente
+pnpm dev
 ```
 
-You can build a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
+Ou rode cada app individualmente:
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
+```bash
+# Apenas a API
+pnpm dev --filter=api
 
-```sh
-turbo build --filter=docs
+# Apenas o frontend
+pnpm dev --filter=web
 ```
 
-Without global `turbo`:
+Acesse o frontend em [http://localhost:3000](http://localhost:3000). A API estará disponível em [http://localhost:8787](http://localhost:8787).
 
-```sh
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
+## Variáveis de Ambiente
+
+### Web (`apps/web`)
+
+| Variável | Descrição | Default |
+|----------|-----------|---------|
+| `NEXT_PUBLIC_API_URL` | URL base da API | `http://localhost:8787` |
+
+Em desenvolvimento, o default funciona sem configuração adicional. Para produção, defina a URL da API deployada.
+
+> **Nota:** Não há variáveis de ambiente com credenciais. As chaves de API dos provedores de IA são fornecidas pelo usuário a cada requisição e nunca são armazenadas.
+
+## Scripts Disponíveis
+
+Todos os comandos abaixo podem ser executados na raiz do monorepo:
+
+```bash
+pnpm dev          # Desenvolvimento (API + Web)
+pnpm build        # Build de todas as apps
+pnpm lint         # Lint com Biome
+pnpm format       # Formatação com Biome
+pnpm type-check   # Verificação de tipos TypeScript
+pnpm test         # Executa todos os testes
+pnpm clean        # Remove node_modules, dist e .turbo
 ```
 
-### Develop
+### Scripts específicos da API (`apps/api`)
 
-To develop all apps and packages, run the following command:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo dev
+```bash
+pnpm --filter=api test         # Roda os 132 testes da API
+pnpm --filter=api test:watch   # Testes em modo watch
+pnpm --filter=api deploy       # Deploy para Cloudflare Workers
 ```
 
-Without global `turbo`, use your package manager:
+## Como Usar
 
-```sh
-cd my-turborepo
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
-```
+1. Rode `pnpm dev` e acesse [http://localhost:3000](http://localhost:3000)
+2. Faça upload do seu currículo (PDF ou LaTeX)
+3. Cole a descrição da vaga
+4. Selecione o provedor de IA (OpenAI, Anthropic ou Google)
+5. Insira sua chave de API do provedor escolhido
+6. Clique em **Analisar** para receber a análise ATS
+7. Opcionalmente, clique em **Melhorar meu CV** para gerar uma versão otimizada
 
-You can develop a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
+## Endpoints da API
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| `GET` | `/` | Health check |
+| `POST` | `/analyze` | Análise ATS do currículo |
+| `POST` | `/improve` | Geração de CV melhorado + re-score |
 
-```sh
-turbo dev --filter=web
-```
+## Licença
 
-Without global `turbo`:
-
-```sh
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo login
-```
-
-Without global `turbo`, use your package manager:
-
-```sh
-cd my-turborepo
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo link
-```
-
-Without global `turbo`:
-
-```sh
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.dev/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.dev/docs/reference/configuration)
-- [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
+Open source.

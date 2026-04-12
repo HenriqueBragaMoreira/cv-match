@@ -73,7 +73,8 @@
 
         "*.config.js",
         "*.config.mjs",
-        "*.config.ts"
+        "*.config.ts",
+        "vitest.config.ts"
       ],
       "linter": {
         "rules": {

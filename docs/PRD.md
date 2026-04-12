@@ -291,15 +291,15 @@ FASE 12 — RESPONSIVIDADE E POLISH (WEB)
 FASE 13 — TESTES DO FRONTEND
 ================================================================================
 
-13.1 [not implemented] Configurar framework de testes no app web (Vitest + Testing Library)
+13.1 [done] Configurar framework de testes no app web (Vitest + Testing Library)
 
-13.2 [not implemented] Escrever testes para componentes do formulário
+13.2 [done] Escrever testes para componentes do formulário
      - Upload, input de API key, seleção de provider, textarea
 
-13.3 [not implemented] Escrever testes para componentes de resultado
+13.3 [done] Escrever testes para componentes de resultado
      - Score, strengths/weaknesses, keywords, breakdown, warnings
 
-13.4 [not implemented] Escrever testes para fluxo de melhoria de CV
+13.4 [done] Escrever testes para fluxo de melhoria de CV
      - Botão melhorar, comparação de scores, download
 
 ================================================================================
@@ -340,7 +340,7 @@ Fase  9 — Formulário de Análise (Web)     : 6/6  tarefas concluídas
 Fase 10 — Exibição de Resultados (Web)    : 7/7  tarefas concluídas
 Fase 11 — Melhoria do CV (Web)            : 5/5  tarefas concluídas
 Fase 12 — Responsividade e Polish (Web)   : 4/4  tarefas concluídas
-Fase 13 — Testes do Frontend              : 0/4  tarefas concluídas
+Fase 13 — Testes do Frontend              : 4/4  tarefas concluídas
 Fase 14 — Deploy e Finalização            : 0/5  tarefas concluídas
 --------------------------------------------------------------------------
-TOTAL                                     : 49/59 tarefas concluídas
+TOTAL                                     : 53/59 tarefas concluídas
